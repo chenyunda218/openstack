@@ -5,7 +5,7 @@ HOSTNAME_1=$3
 IP_1=$4
 HOSTNAME_2=$5
 IP_2=$6
-cat << EOF > /etcd
+cat << EOF > /etc/default/etcd
 ETCD_NAME="$THIS_HOSTNAME"
 ETCD_LISTEN_PEER_URLS="http://$THIS_IP:2380"
 ETCD_LISTEN_CLIENT_URLS="http://$THIS_IP:2379,http://127.0.0.1:2379"
